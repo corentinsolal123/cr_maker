@@ -95,8 +95,7 @@ export default function Daily() {
                                 <tr className="bg-gray-800">
                                     <th className="border border-gray-700 px-4 py-2">Nom</th>
                                     <th className="border border-gray-700 px-4 py-2">Présent(e)</th>
-                                    <th className="border border-gray-700 px-4 py-2">Hier</th>
-                                    <th className="border border-gray-700 px-4 py-2">Aujourd&#39;hui</th>
+                                    <th className="border border-gray-700 px-4 py-2">Résumé</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -109,10 +108,12 @@ export default function Daily() {
                                             {participant.status === 'X' ? 'Oui' : 'Non'}
                                         </td>
                                         <td className="border border-gray-700 px-4 py-2">
-                                            {participant.yesterday || '-'}
-                                        </td>
-                                        <td className="border border-gray-700 px-4 py-2">
-                                            {participant.today || '-'}
+                                            <p>
+                                                Hier: {participant.yesterday || '-'}
+                                            </p>
+                                            <p>
+                                                Aujourd&#39;hui: {participant.today || '-'}
+                                            </p>
                                         </td>
                                     </tr>
                                 ))}
