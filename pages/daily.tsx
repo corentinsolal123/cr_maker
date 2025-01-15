@@ -96,7 +96,7 @@ export default function Daily() {
                                     <th className="border border-gray-700 px-4 py-2">Nom</th>
                                     <th className="border border-gray-700 px-4 py-2">Présent(e)</th>
                                     <th className="border border-gray-700 px-4 py-2">Hier</th>
-                                    <th className="border border-gray-700 px-4 py-2">Aujourd'hui</th>
+                                    <th className="border border-gray-700 px-4 py-2">Aujourd&#39;hui</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -120,7 +120,7 @@ export default function Daily() {
                             </table>
                         </div>
                     ) : (
-                        <p className="text-gray-400 mt-4">Aucun participant ajouté pour l'instant.</p>
+                        <p className="text-gray-400 mt-4">Aucun participant ajouté pour l&#39;instant.</p>
                     )}
                 </div>
             </div>
