@@ -111,7 +111,7 @@ export default function Weekly() {
                             </table>
                         </div>
                     ) : (
-                        <p className="text-gray-400 mt-4">Aucun participant ajouté pour l'instant.</p>
+                        <p className="text-gray-400 mt-4">Aucun participant ajouté pour l&#39;instant.</p>
                     )}
                 </div>
             </div>
