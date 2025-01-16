@@ -5,10 +5,10 @@ const Navbar = () => {
         <nav className="bg-gray-900 shadow-lg">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Lien vers l'accueil */}
-                <Link href="/">
-          <span className="text-2xl text-white font-bold hover:text-gray-400 transition duration-300">
-            CR Maker
-          </span>
+                <Link href="/index">
+                  <span className="text-2xl text-white font-bold hover:text-gray-400 transition duration-300">
+                    CR Maker
+                </span>
                 </Link>
 
                 {/* Bouton de menu pour mobile */}
@@ -16,7 +16,7 @@ const Navbar = () => {
                     className="lg:hidden text-white focus:outline-none"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
+                    data-bs-target="@navbarNav"
                     aria-controls="navbarNav"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
