@@ -4,8 +4,7 @@ const Navbar = () => {
     return (
         <nav className="bg-gray-900 shadow-lg">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                {/* Lien vers l'accueil */}
-                <Link href="/index">
+                <Link href="/">
                   <span className="text-2xl text-white font-bold hover:text-gray-400 transition duration-300">
                     CR Maker
                 </span>
@@ -29,7 +28,7 @@ const Navbar = () => {
                     <ul className="flex space-x-6 text-lg">
                         {/* Lien vers la page Weekly */}
                         <li>
-                            <Link href="/weekly">
+                            <Link href="/Weekly">
                                 <span className="text-white hover:text-gray-400 transition duration-300">Weekly</span>
                             </Link>
                         </li>
@@ -48,7 +47,7 @@ const Navbar = () => {
             <div className="lg:hidden collapse navbar-collapse" id="navbarNav">
                 <ul className="bg-gray-900 p-4">
                     <li className="my-2">
-                        <Link href="/weekly">
+                        <Link href="/Weekly">
                             <span className="text-white hover:text-gray-400">Weekly</span>
                         </Link>
                     </li>

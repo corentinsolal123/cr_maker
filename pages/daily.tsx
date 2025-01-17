@@ -1,5 +1,6 @@
 import {useState} from 'react';
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 type Participant = {
     name: string;
@@ -125,6 +126,7 @@ export default function Daily() {
                     )}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }
