@@ -9,49 +9,51 @@ const WeeklyForm: React.FC = () => {
 
     const generateSummary = (name: string) => {
         let taskTable = `
-    <table class="table-auto w-full text-left mt-4 border border-gray-300">
-        <thead class="bg-gray-700 text-gray-200">
-            <tr>
-                <th class="px-4 py-2 border border-gray-300">Tâches à mener</th>
-                <th class="px-4 py-2 border border-gray-300">Observations</th>
-            </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-200">
-`;
+            <table class="table-auto w-full text-left mt-4 border border-gray-300">
+                <thead class="bg-gray-700 text-gray-200">
+                    <tr>
+                        <th class="px-4 py-2 border border-gray-300">Tâches à mener</th>
+                        <th class="px-4 py-2 border border-gray-300">Observations</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+        `;
 
         tasks.forEach((task) => {
             taskTable += `
-        <tr>
-            <td class="px-4 py-2 border border-gray-300">${task.taskName || "Non spécifié"}</td>
-            <td class="px-4 py-2 border border-gray-300">${task.taskObservation || "Non spécifié"}</td>
-        </tr>
-    `;
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">${task.taskName || "Non spécifié"}</td>
+                    <td class="px-4 py-2 border border-gray-300">${task.taskObservation || "Non spécifié"}</td>
+                </tr>
+            `;
         });
 
         taskTable += `</tbody></table>`;
 
+        taskTable += '<h2>Mon avis: </h2>'
+
         let opinionTable = `
-    <table class="table-auto w-full text-left mt-4 border border-gray-300">
-        <thead class="bg-gray-700 text-gray-200">
-            <tr>
-                <th class="px-4 py-2 border border-gray-300">Mon avis</th>
-                <th class="px-4 py-2 border border-gray-300">Commentaire</th>
-            </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-200">
-`;
+            <table class="table-auto w-full text-left mt-4 border border-gray-300">
+                <thead class="bg-gray-700 text-gray-200">
+                    <tr>
+                        <th class="px-4 py-2 border border-gray-300">Mon avis</th>
+                        <th class="px-4 py-2 border border-gray-300">Commentaire</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+        `;
 
         opinions.forEach((opinion) => {
             opinionTable += `
-        <tr>
-            <td class="px-4 py-2 border border-gray-300">${opinion.opinionContext || "Non spécifié"}: 
-                <span class="${opinion.opinionResult === "bad" ? "text-red-500" : opinion.opinionResult === "average" ? "text-yellow-500" : "text-green-500"}">
-                    <strong>${opinion.opinionResult === "bad" ? "Mauvaise" : opinion.opinionResult === "average" ? "À améliorer" : "Bonne"}</strong>
-                </span>
-            </td>
-            <td class="px-4 py-2 border border-gray-300">${opinion.opinionComment || "Non spécifié"}</td>
-        </tr>
-    `;
+                <tr>
+                    <td class="px-4 py-2 border border-gray-300">${opinion.opinionContext || "Non spécifié"}: 
+                        <span class="${opinion.opinionResult === "bad" ? "text-red-500" : opinion.opinionResult === "average" ? "text-yellow-500" : "text-green-500"}">
+                            <strong>${opinion.opinionResult === "bad" ? "Mauvaise" : opinion.opinionResult === "average" ? "À améliorer" : "Bonne"}</strong>
+                        </span>
+                    </td>
+                    <td class="px-4 py-2 border border-gray-300">${opinion.opinionComment || "Non spécifié"}</td>
+                </tr>
+            `;
         });
 
         opinionTable += `</tbody></table>`;
